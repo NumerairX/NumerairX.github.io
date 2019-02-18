@@ -12,7 +12,7 @@ Before we start, I want to acknowledge that everything I learned in this post wa
 
 ### Intuitions on Black-Litterman-Bayes
 
-Objective: find optimized holdings of our portfolio s.t.  h* = argmax_h {E[h'r] - \frac{{k}}{2}V[h'r] }
+Objective: find optimized holdings of our portfolio s.t.  $$h* = argmax_h {E[h'r] - \frac{{k}}{2}V[h'r] }$$
 
 Translation: Need to estimate mean and variance of $$r$$ to solve mean-variance optimization
 

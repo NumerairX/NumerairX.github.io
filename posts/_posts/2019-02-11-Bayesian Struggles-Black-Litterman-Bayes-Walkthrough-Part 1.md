@@ -43,7 +43,7 @@ Our calculation steps then follow:
 
 ### Posterior of $\theta$
 
-Very obviously we can approximate the posterior to $$ N(q \lvert p\theta,\Omega) N(\theta \lvert \Pi,\Omega)$$ according to item 1. (question to readers, think about why are normalizer neglect-able?). 
+Very obviously we can approximate the posterior to $$ N(q \lvert p\theta,\Omega) N(\theta \lvert \Pi,\Omega)​$$ according to item 1. (question to readers, think about why are normalizer neglect-able?). 
 
 Having normal distribution in hand, we realize that it's much easier to get log form and log function preserves monotonicity. Finally we have:
 $$

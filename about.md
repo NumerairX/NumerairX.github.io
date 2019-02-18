@@ -4,7 +4,9 @@ order: 4
 image: /assets/img/blog/hydejack-8.png
 ---
 
-# About two people, and two advice they gave
+# A short story
+
+### About Two People, and Two Advice They Gave
 
 In 2017 October, the second to last semester I'm at NYU financial engineering, I was kindly offered a position working on sell side rates trading analytics.
 

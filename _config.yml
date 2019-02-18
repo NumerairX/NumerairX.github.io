@@ -303,13 +303,14 @@ relative_links:
 titles_from_headings:
   strip_title: true
   collections: true
-
-
+  
+markdown:           kramdown
 kramdown:
-  math_engine:         mathjax # this is not a typo
-  math_engine_opts:
-    preview:           true
-    preview_as_code:   true
+  auto_ids:         true
+  footnote_nr:      1
+  entity_output:    as_char
+  toc_levels:       1..6
+  enable_coderay:   false
     
 compress_html:
   comments: ["<!-- ", " -->"]

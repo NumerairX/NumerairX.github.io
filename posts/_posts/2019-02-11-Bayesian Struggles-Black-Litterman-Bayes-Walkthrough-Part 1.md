@@ -12,38 +12,38 @@ Before we start, I want to acknowledge that everything I learned in this post wa
 
 ### Intuitions on Black-Litterman-Bayes
 
-Objective: find optimized holdings of our portfolio s.t. $\small h* = argmax_h {E[h'r] - \frac{{k}}{2}V[h'r] }$
+Objective: find optimized holdings of our portfolio s.t.  h* = argmax_h {E[h'r] - \frac{{k}}{2}V[h'r] }
 
-Translation: Need to estimate mean and variance of $r$ to solve mean-variance optimization
+Translation: Need to estimate mean and variance of $$r$$ to solve mean-variance optimization
 
 Elements needed:
 
-- Unconditional expectation and variance of $r$ to get posterior update $\small r \sim  N(\theta,\sum)$
-- $\small r$'s conjugate prior, let $\small \theta \sim N(\Pi,C)$
-- priori optimal portfolio holding $\small h_b$
+- Unconditional expectation and variance of $$r$$ to get posterior update $$ r \sim  N(\theta,\sum)$$
+- $$ r$$'s conjugate prior, let $$ \theta \sim N(\Pi,C)$$
+- priori optimal portfolio holding $$ h_b$$
 
 
 
 ### Bayesian Set Up
 
-Imagine we have some portfolios, and N portfolio managers has opinion on what sector might outperform all other sectors by a percentage, $\small q%$. Then essentially the holdings on portfolio of each manager makes up a matrix $\small P$ of N rows and each row is a set of holdings. Then our expected return on the whole portfolio equals to $\small q$ . 
+Imagine we have some portfolios, and N portfolio managers has opinion on what sector might outperform all other sectors by a percentage, $$ q%$$. Then essentially the holdings on portfolio of each manager makes up a matrix $$ P$$ of N rows and each row is a set of holdings. Then our expected return on the whole portfolio equals to $$ q$$ . 
 
-- on a detailed level, we have $\small E(p_ir) = q_i$ for $\small q_i$ in $\small \mathbb{R}$
+- on a detailed level, we have $$ E(p_ir) = q_i$$ for $$ q_i$$ in $$ \mathbb{R}$$
 
-Importantly, we specify error for each expectation, for which we will denote as $\small \epsilon_i \sim N(0, \Omega)$ and thus we have a likelihood to maximize. 
+Importantly, we specify error for each expectation, for which we will denote as $$ \epsilon_i \sim N(0, \Omega)$$ and thus we have a likelihood to maximize. 
 
 Our calculation steps then follow:
 
-1. calculate posterior of $\small \theta$, $\small p (\theta \lvert q) = \frac{f(q \lvert \theta)\pi(\theta) }{\int{f(q\lvert \theta)\pi(\theta)}}$
-2. use the above to calculate the posterior of $r$: $\small p(r \lvert q) = \int{p(r \lvert \theta)p(\theta \lvert q)d\theta} $ 
+1. calculate posterior of $$ \theta$$, $$ p (\theta \lvert q) = \frac{f(q \lvert \theta)\pi(\theta) }{\int{f(q\lvert \theta)\pi(\theta)}}$$
+2. use the above to calculate the posterior of $$r$$: $$ p(r \lvert q) = \int{p(r \lvert \theta)p(\theta \lvert q)d\theta} $$ 
 
-3. use the mean and variance of posterior of r to calculate $\small h_{opt}$
+3. use the mean and variance of posterior of r to calculate $$ h_{opt}$$
 
 
 
 ### Posterior of $\theta$
 
-Very obviously we can approximate the posterior to $\small N(q \lvert p\theta,\Omega) N(\theta \lvert \Pi,\Omega)$ according to item 1. (question to readers, think about why are normalizer neglect-able?). 
+Very obviously we can approximate the posterior to $$ N(q \lvert p\theta,\Omega) N(\theta \lvert \Pi,\Omega)$$ according to item 1. (question to readers, think about why are normalizer neglect-able?). 
 
 Having normal distribution in hand, we realize that it's much easier to get log form and log function preserves monotonicity. Finally we have:
 $$
@@ -52,31 +52,31 @@ $$
 \small	= \theta'(P'\Omega^{-1}P+C^{-1})\theta - 2(q'\Omega^{-1}P + \Pi'C^{-1})\theta\\
 \small	= \theta'H\theta - 2\eta\theta
 $$
-For simplicity, let $\small H = P'\Omega^{-1}P+C^{-1}$ and $\small \eta = q'\Omega^{-1}P + \Pi'C^{-1}$
+For simplicity, let $$ H = P'\Omega^{-1}P+C^{-1}$$ and $$ \eta = q'\Omega^{-1}P + \Pi'C^{-1}$$
 
-Now, think about how we get mean and covariance of $\theta$
+Now, think about how we get mean and covariance of $$\theta$$
 $$
 \small logp(\theta) \approx c + \frac{(\theta-\mu)^2}{\sigma^2}\\
 \small \approx \frac{\theta^2}{\sigma^2} + \frac{2\theta\mu}{\sigma^2}\ (omitting\ terms\ without\ \theta)\                  (4)
 $$
-It's then clear that $\small H = \frac{1}{\sigma^2}\ and\ \eta = \frac{\mu}{\sigma^2} $ so we have covariance equals to $\small H^{-1}$ and mean equals $\small H^{-1}\eta$.
+It's then clear that $$ H = \frac{1}{\sigma^2}\ and\ \eta = \frac{\mu}{\sigma^2} $$ so we have covariance equals to $$ H^{-1}$$ and mean equals $$ H^{-1}\eta$$.
 
 
 
 ### Posterior of r
 
-Well at this stage, I bet my readers already know the derivation for this one. Thanks to conjugate prior, we will be able to maintain the same update format as $\small \theta$. 
+Well at this stage, I bet my readers already know the derivation for this one. Thanks to conjugate prior, we will be able to maintain the same update format as $$ \theta$$. 
 
-let $\small \xi = H^{-1}\eta, v = H^{-1}$, hence 
+let $$ \xi = H^{-1}\eta, v = H^{-1}$$, hence 
 $$
 \small p(r|q) \sim N(r|P\theta,\Omega) N(\theta|\xi,v)
 $$
-Similarly, we let $H_r = V^{-1} + p'\Omega^{-1}P, \eta'_r =\xi'V^{-1} + r'\Omega^{-1}P$, and one more term $z = r'\Omega^{-1}r + \xi'V^{-1}\xi$
+Similarly, we let $$H_r = V^{-1} + p'\Omega^{-1}P, \eta'_r =\xi'V^{-1} + r'\Omega^{-1}P$$, and one more term $$z = r'\Omega^{-1}r + \xi'V^{-1}\xi$$
 
 and using the same trick, we get 
 $$
-\small \mathbb{E}(r) = (\Omega^{-1}+\Omega^-1PH_r^{-1}P'\Omega^{-1})^{-1}\Omega^{-1}PH_r^{-1}V^{-1}\xi\\
-\small \mathbb{V}(r) = (\Omega^{-1}+\Omega^{-1}PH_r^{-1}P'\Omega^{-1})^{-1}
+\mathbb{E}(r) = (\Omega^{-1}+\Omega^-1PH_r^{-1}P'\Omega^{-1})^{-1}\Omega^{-1}PH_r^{-1}V^{-1}\xi\\
+ \mathbb{V}(r) = (\Omega^{-1}+\Omega^{-1}PH_r^{-1}P'\Omega^{-1})^{-1}
 $$
 
 

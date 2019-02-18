@@ -24,8 +24,7 @@ title:                 NumerairX
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
 description:           >
-  Periodic Quant Struggles
-  
+  Periodic Quant Struggles<br/>
   Learning, Row by Row
 
 # A shorter description for the sidebar.
@@ -91,7 +90,7 @@ font_heading: Roboto Slab, Helvetica, Arial, sans-serif
 
 defaults:
   - scope:
-      path: hyde
+      path: posts
     values:
       accent_color: rgb(38,139,210)
       accent_image:

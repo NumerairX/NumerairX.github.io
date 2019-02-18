@@ -8,7 +8,9 @@ tag:
 ---
 
 I want to start this first post of the series of Bayesian stats with this meme.
-<a href="{{ site.url }}/assets/img/blog/bayesfun.png"><img src="{{ site.url }}/images/bayesfun.png" alt="bayesian meme"></a>  
+
+<a href="{{ site.url }}/assets/img/blog/bayesfun.png"><img src="{{ site.url }}/assets/img/blog/bayesfun.png" alt="bayesian meme"></a> 
+
 (image from [Bayesian Fun](https://www2.isye.gatech.edu/~brani/isyebayes/jokes.html))
 
 It is also important to make sure my dear reader(s) knows that I am by all means not an expert in statistics (let me know if u found mistakes!). I came from an applied math background but had no interest in taking stats in college (thought it was easy and too formulaic at that time, naive!!). So I am almost completely self-taught in this subject and prone to interpret things in a familiar way to help me understand. 

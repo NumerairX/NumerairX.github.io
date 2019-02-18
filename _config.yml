@@ -24,8 +24,9 @@ title:                 NumerairX
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
 description:           >
-  "Periodic Quant Struggles"
-  'Learning, Row by Row'
+  Periodic Quant Struggles
+  
+  Learning, Row by Row
 
 # A shorter description for the sidebar.
 tagline:               
@@ -303,13 +304,13 @@ titles_from_headings:
   strip_title: true
   collections: true
 
-kramdown:
-  footnote_backlink: "&#x21a9;&#xfe0e;"
-  math_engine: mathjax
-  math_engine_opts:
-    preview: true
-    preview_as_code: true
 
+kramdown:
+  math_engine:         mathjax # this is not a typo
+  math_engine_opts:
+    preview:           true
+    preview_as_code:   true
+    
 compress_html:
   comments: ["<!-- ", " -->"]
   clippings: all

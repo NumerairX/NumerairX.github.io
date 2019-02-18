@@ -1,13 +1,11 @@
 ---
 layout: list
-title: Hyde
-slug: hyde
+title: Random Life Comments
+slug: random life comments
 menu: true
 order: 2
 description: >
-  Hyde is a brazen two-column Jekyll theme that pairs a prominent sidebar with uncomplicated content.
-  It’s based on Poole, the Jekyll butler.
-  Open `_featured_tags/hyde.md` to edit this text.
+  potentially documenting the quarter-life crisis I'm going through (am I 25 yet??)
 accent_color: rgb(38,139,210)
 accent_image:
   background: rgb(32,32,32)

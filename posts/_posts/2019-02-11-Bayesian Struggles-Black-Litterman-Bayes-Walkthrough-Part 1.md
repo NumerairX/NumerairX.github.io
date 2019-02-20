@@ -47,17 +47,23 @@ Very obviously we can approximate the posterior to $$ N(q \lvert p\theta,\Omega)
 
 Having normal distribution in hand, we realize that it's much easier to get log form and log function preserves monotonicity. Finally we have:
 $$
-\small -2logp(\theta) \sim (P\theta-q)'\Omega^{-1}(p\theta-q) + (\theta-\Pi)'C(\theta-\Pi)\\
-\small 	= please\ pick\ up\ your\ pen\ and\ multiply\ out\ the\ brackets\\
-\small	= \theta'(P'\Omega^{-1}P+C^{-1})\theta - 2(q'\Omega^{-1}P + \Pi'C^{-1})\theta\\
-\small	= \theta'H\theta - 2\eta\theta
+\begin{align*} 
+&\small -2logp(\theta) \sim (P\theta-q)'\Omega^{-1}(p\theta-q) + (\theta-\Pi)'C(\theta-\Pi)\\
+& \small 	= please\ pick\ up\ your\ pen\ and\ multiply\ out\ the\ brackets \\
+& \small	= \theta'(P'\Omega^{-1}P+C^{-1})\theta - 2(q'\Omega^{-1}P + \Pi'C^{-1})\theta \\
+& \small = \theta'H\theta - 2\eta\theta \\
+\end{align*}
 $$
+
+
 For simplicity, let $$ H = P'\Omega^{-1}P+C^{-1}$$ and $$ \eta = q'\Omega^{-1}P + \Pi'C^{-1}$$
 
 Now, think about how we get mean and covariance of $$\theta$$
 $$
-\small logp(\theta) \approx c + \frac{(\theta-\mu)^2}{\sigma^2}\\
-\small \approx \frac{\theta^2}{\sigma^2} + \frac{2\theta\mu}{\sigma^2}\ (omitting\ terms\ without\ \theta)\                  (4)
+\begin{aligned} 
+& \small logp(\theta) \approx c + \frac{(\theta-\mu)^2}{\sigma^2}\\
+& \small \approx \frac{\theta^2}{\sigma^2} + \frac{2\theta\mu}{\sigma^2}\ (omitting\ terms\ without\ \theta)\                  (4)
+\end{aligned}
 $$
 It's then clear that $$ H = \frac{1}{\sigma^2}\ and\ \eta = \frac{\mu}{\sigma^2} $$ so we have covariance equals to $$ H^{-1}$$ and mean equals $$ H^{-1}\eta$$.
 
@@ -69,20 +75,24 @@ Well at this stage, I bet my readers already know the derivation for this one. T
 
 let $$ \xi = H^{-1}\eta, v = H^{-1}$$, hence 
 $$
-\small p(r|q) \sim N(r|P\theta,\Omega) N(\theta|\xi,v)
+\begin{aligned} \small p(r|q) \sim N(r|P\theta,\Omega) N(\theta|\xi,v)
+\end{aligned}
 $$
 Similarly, we let $$H_r = V^{-1} + p'\Omega^{-1}P, \eta'_r =\xi'V^{-1} + r'\Omega^{-1}P$$, and one more term $$z = r'\Omega^{-1}r + \xi'V^{-1}\xi$$
 
 and using the same trick, we get 
 $$
-\mathbb{E}(r) = (\Omega^{-1}+\Omega^-1PH_r^{-1}P'\Omega^{-1})^{-1}\Omega^{-1}PH_r^{-1}V^{-1}\xi\\
- \mathbb{V}(r) = (\Omega^{-1}+\Omega^{-1}PH_r^{-1}P'\Omega^{-1})^{-1}
+\begin{aligned} 
+& \small \mathbb{E}(r) = (\Omega^{-1}+\Omega^-1PH_r^{-1}P'\Omega^{-1})^{-1}\Omega^{-1}PH_r^{-1}V^{-1}\xi\\
+& \small \mathbb{V}(r) = (\Omega^{-1}+\Omega^{-1}PH_r^{-1}P'\Omega^{-1})^{-1}
+ \end{aligned}
 $$
 
 
 Recall our portfolio set up, we can now obtain optimal portfolio holding
 $$
-\small h_{opt} = (k\mathbb{V}(r))^{-1}\mathbb{E}(r)
+\begin{aligned} \small h_{opt} = (k\mathbb{V}(r))^{-1}\mathbb{E}(r)
+\end{aligned}
 $$
 
 

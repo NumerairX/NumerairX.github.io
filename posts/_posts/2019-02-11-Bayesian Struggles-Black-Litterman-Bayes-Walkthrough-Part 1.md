@@ -56,6 +56,7 @@ $$
 $$
 
 
+
 For simplicity, let $$ H = P'\Omega^{-1}P+C^{-1}$$ and $$ \eta = q'\Omega^{-1}P + \Pi'C^{-1}$$
 
 Now, think about how we get mean and covariance of $$\theta$$
@@ -65,6 +66,8 @@ $$
 & \small \approx \frac{\theta^2}{\sigma^2} + \frac{2\theta\mu}{\sigma^2}\ (omitting\ terms\ without\ \theta)\                  (4)
 \end{aligned}
 $$
+
+
 It's then clear that $$ H = \frac{1}{\sigma^2}\ and\ \eta = \frac{\mu}{\sigma^2} $$ so we have covariance equals to $$ H^{-1}$$ and mean equals $$ H^{-1}\eta$$.
 
 
@@ -78,6 +81,8 @@ $$
 \begin{aligned} \small p(r|q) \sim N(r|P\theta,\Omega) N(\theta|\xi,v)
 \end{aligned}
 $$
+
+
 Similarly, we let $$H_r = V^{-1} + p'\Omega^{-1}P, \eta'_r =\xi'V^{-1} + r'\Omega^{-1}P$$, and one more term $$z = r'\Omega^{-1}r + \xi'V^{-1}\xi$$
 
 and using the same trick, we get 
@@ -87,6 +92,7 @@ $$
 & \small \mathbb{V}(r) = (\Omega^{-1}+\Omega^{-1}PH_r^{-1}P'\Omega^{-1})^{-1}
  \end{aligned}
 $$
+
 
 
 Recall our portfolio set up, we can now obtain optimal portfolio holding

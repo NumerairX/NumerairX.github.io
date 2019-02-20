@@ -73,9 +73,9 @@ $$\int_{- \infty}^{\infty} \frac{1}{\sqrt{2\pi\sigma_0^2}} e^{\frac{-(\mu-\mu_0)
 
 #### Our goal: find $p(x|\mu,\tau)$
 
-    Tricky part: find $$p(\mu,\tau)$$
+<u>*Tricky part:*</u> find $$p(\mu,\tau)$$
 
-Similarly to the problem of only $$\sigma^2$$ fixed, consider a gamma prior, $$\tau \propto \Gamma(\alpha,\beta) $$, and we use the parametrization that PDF is $$ \frac{\beta^\alpha}{\Gamma(\alpha)} x^{\alpha-1} e^{-x\beta}$$ then for $$\sigma^2$$ is (obviously) an inverse gamma distribution, aka $$\sigma^2 \propto IG(\alpha,\beta)$$.
+Similarly to the problem of only $$\sigma^2​$$ fixed, consider a gamma prior, $$\tau \propto \Gamma(\alpha,\beta) ​$$, and we use the parametrization that PDF is $$ \frac{\beta^\alpha}{\Gamma(\alpha)} x^{\alpha-1} e^{-x\beta}​$$ then for $$\sigma^2​$$ is (obviously) an inverse gamma distribution, aka $$\sigma^2 \propto IG(\alpha,\beta)​$$.
 
 However, I did struggle a while understanding what $$\mu$$ should be because it seems independent of $$\sigma^2$$. 
 But if $$\mu$$ and $$\sigma^2$$ are independent of each other, posterior won't be in inverse gamma format so we end up having nothing handy. 

@@ -133,7 +133,7 @@ google_analytics:      UA-134618198-1
 # ----------------------------------------------------------------------------------------
 # These settings are specific to Hydejack.
 
-posts:
+blog:
   # Configure the order of complementary content on blog posts
   post_addons: [about, newsletter, related]
 

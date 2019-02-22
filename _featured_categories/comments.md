@@ -4,6 +4,7 @@ title: Random Life Comments
 slug: random life comments
 menu: true
 order: 2
+permalink: /comments/
 description: >
   potentially documenting the quarter-life crisis I'm going through (am I 25 yet??)
 accent_color: rgb(38,139,210)

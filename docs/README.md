@@ -4,7 +4,7 @@ description: >
 hide_description: false
 menu: true
 order: 5
-permalink: /docs/
+permalink: /blogroll/
 ---
 
 # Blog Roll

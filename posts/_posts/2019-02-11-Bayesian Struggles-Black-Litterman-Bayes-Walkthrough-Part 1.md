@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Bayesian Struggles: Black Litterman Bayes Walkthrough Part 1"
-date:   2019-02-10
+date:   2019-02-11
 comments: true
 tag:
 - statistics

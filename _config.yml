@@ -31,7 +31,7 @@ description:           >
 tagline:               
 
 # A list of keywords for your blog
-keywords: []
+keywords: [statistics,quant stuff,trading]
 
 # A (square) logo for your site.
 # If provided, it will be shown at the top of the sidebar.
@@ -47,7 +47,7 @@ author:
 
 # This text will appear in a `<small>` tag in the footer of every page.
 copyright: >
-  © 2018. All rights reserved.
+  © Copyright © Mengzhou (Jojo) Tang , 2018 
 
 # Add links to the footer.
 # Typically you'll want to link to your impress, cookies or privacy policy, etc.

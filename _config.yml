@@ -127,7 +127,7 @@ google_analytics:      UA-134618198-1
 disqus:                numerairx-github-io
 
 # Setting a tinyletter username will enable the newsletter subscription box.
-# tinyletter:            <tinyletter_username>
+tinyletter:            jojotrex
 
 # Hydejack Settings
 # ----------------------------------------------------------------------------------------
@@ -317,6 +317,6 @@ compress_html:
   endings: all
   ignore:
     envs: [development]
-
+    
 sass:
   style: compressed

@@ -1,3 +1,13 @@
+layout: post
+title:  "Bayesian Struggles: Black Litterman Bayes Walkthrough Part 1"
+date:   2019-02-10
+comments: true
+tag:
+
+- statistics
+
+
+
 The beauty of mathematics, to me, lies the most in the ability of substantiating abstract ideas. One of my favorite to name is the orbit-stabilizer theorem (imaginable as a cube with orbit and you can flip it by rules).
 
 

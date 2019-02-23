@@ -3,6 +3,7 @@ layout: post
 title:  "Bayesian Struggles: why we need conjugate priors"
 date:   2018-12-22
 excerpt: "starting with two simple examples..."
+comments: true
 tag:
 - statistics
 ---

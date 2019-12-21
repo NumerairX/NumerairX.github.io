@@ -1,3 +1,14 @@
+---
+layout: post
+title:  "2019 - Thoughts on Good Foundation and Reading List"
+date:   2019-12-20
+comments: true
+tag:
+- reading-list
+---
+
+
+
 As it's approaching the end of 2019, I want to review what I have learned this year, and again share my reading list. Around June, I asked myself what are the foundations a good junior level strat/quant should have, to be at least able to understand and critic existing academic papers or algorithms and come up with something on his/her own. I decided on the follow, and lease leave a comment if you think I missed anything!
 
 - **Statistical Sense:** Know how to do hypothesis testing correctly; know how to test significance properly; know the origins of each distribution (family); understand assumptions in fitting distributions; understand when to and when not to be independent; clear on trade offs between error types; understand how bias and variance arise with different models and aggregation methods; understand Bayesian statistics;  know what led to use of M-estimator and why it's used; understand stochastic calculus concepts, drift, jump, hitting time, exact solution and approximation;
@@ -7,13 +18,17 @@ As it's approaching the end of 2019, I want to review what I have learned this y
 
 I tried to expand my knowledge base in each categories, but for the first two I learned an extreme amount  from designing my first ever quant strategy at work (has been up and running in production for four months now!). Kudos to countless mathematics exchanges and cross validated answers, and to all stack exchange communities! Now moving on to the books I've read this year. I have mostly focused on optimal control since I have been interested in learning it systematically for quite long. There are some particular things I look for when picking one to be my main source: 
 
-1. must be math-centric. I avoid any books titled "with python/R applications"  
+1. must be math-centric. I avoid any books titled "with python/R applications"
 
 2. preferably an "old" book in the field
+
 3. Fun to read, some but not excessive examples 
+
 4. On par with undergraduate level textbook standard
 
-### The Topics
+   
+
+# The Topics
 
 1. ##### convex optimizations (recommend Convex Optimization by Stephen Boyd)
 
